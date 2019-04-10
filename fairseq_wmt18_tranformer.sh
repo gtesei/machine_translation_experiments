@@ -42,7 +42,10 @@ MODEL=wmt16.en-de.joined-dict.transformer
 CODE=code_wmt18
 
 sacrebleu -t wmt18 -l en-de --echo src > wmt18.en-de.en
-cat wmt18.en-de.en| $NORM_PUNC -l en | $TOKENIZER -a -l en -q | python $BPEROOT/apply_bpe.py -c ${CODE} | fairseq-interactive data-bin/${MODEL}/ \
-	--path data-bin/${MODEL}/model.pt --remove-bpe --buffer-size 1024 --batch-size 16 -s ${SRC} -t ${DEST} | grep -P "^H" |cut -f 3- | $DETOKENIZER -l ${DEST} -q > ${CORPUS}.test.${SRC}-${DEST}.${SRC}.out
+START_TIME=$SECONDS
+cat wmt18.en-de.en| $NORM_PUNC -l en | $TOKENIZER -a -l en -q | python $BPEROOT/apply_bpe.py -c ${CODE} | fairseq-interactive data-bin/${MODEL} --path data-bin/${MODEL}/model.pt --remove-bpe --buffer-size 1024 --batch-size 16 -s ${SRC} -t ${DEST} | grep -P "^H" |cut -f 3- | $DETOKENIZER -l ${DEST} -q > ${CORPUS}.test.${SRC}-${DEST}.${SRC}.out
 
 cat ${CORPUS}.test.${SRC}-${DEST}.${SRC}.out | sacrebleu -t ${CORPUS} -l ${SRC}-${DEST} -lc
+
+ELAPSED_TIME=$(($SECONDS - $START_TIME))
+echo "Elapsed time (secs): $ELAPSED_TIME"
