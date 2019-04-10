@@ -21,7 +21,7 @@ Fairseq(-py) is a sequence modeling toolkit from Facebook AI Research that allow
 
 URL: https://github.com/pytorch/fairseq
 
-## [Tranfomers - Ott et al., 2018](https://arxiv.org/abs/1806.00187))
+## [Tranfomers - Ott et al., 2018](https://arxiv.org/abs/1806.00187)
 
 ### Model 
   Description | Dataset | Model | Test set(s)
