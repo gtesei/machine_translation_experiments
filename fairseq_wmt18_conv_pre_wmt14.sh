@@ -46,7 +46,7 @@ else
     echo ">>> looks like you have already downloaded  https://github.com/moses-smt/mosesdecoder.git  ..."
 fi
 
-if [ ! -d "mosesdecoder" ]; then
+if [ ! -d "subword-nmt" ]; then
     # Control will enter here if $DIRECTORY doesn't exist.
     echo 'Cloning Subword NMT repository (for BPE pre-processing)...'
     git clone https://github.com/rsennrich/subword-nmt.git

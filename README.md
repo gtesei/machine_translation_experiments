@@ -47,7 +47,7 @@ URL: https://github.com/pytorch/fairseq
 
 ### Results 
   ```
-  $bash fairseq_wmt18_tranformer_pre_wmt14.sh
+  $bash fairseq_wmt18_conv_pre_wmt14.sh
   ...
   BLEU+case.lc+lang.en-de+numrefs.1+smooth.exp+test.wmt18+tok.13a+version.1.3.1 = 37.1 66.5/42.8/30.3/22.0 (BP = 1.000 ratio = 1.021 hyp_len = 65616 ref_len = 64276)
   Elapsed time (secs): 221
