@@ -33,6 +33,6 @@ pip install fairseq
   Elapsed time (secs): 322
   ```
 
-  The model achieves 39 BLEU and it needs 322 seconds for predicting on the test of WMT18 (2998 sentences).  
+  The model achieves 39 BLEU and it needs 322 seconds for predicting on the test of WMT18 (2998 sentences). The state of the art (4/10/2019) for WMT18 ([Edunov et al., 2018](https://arxiv.org/abs/1808.09381); WMT'18 winner) claims 46.53 although the fairseq committers discloses the result is not reproducible but it is even much slower.   
   
 
