@@ -57,6 +57,25 @@ URL: https://github.com/pytorch/fairseq
    H-1     -0.41815847158432007    Dann wird deutlich , wie sich die Städte und <unk> im Distri@@ bu@@ tions@@ gebiet der <unk> jährigen Zeitung seit dem 19 . <unk> verändert haben .
    P-1     -0.3165 -0.3109 -0.6439 -0.1497 -0.1608 -0.2241 -0.4928 -0.1953 -0.1754 -2.1586 -0.2352 -1.3033 -0.0397 -0.0334 -0.6105 -0.3980 -0.2919 -0.6659 -0.1218 -0.1431 -0.1675 -0.1142 -0.1018 -1.8401 -0.3494 -0.1096 -0.2357 -0.1196	   
    ```
+###  Why it is necessary tokenizing/detokenizing with so many perl scripts
+
+   ```
+   > MODEL_DIR=data-bin/wmt16.en-de.joined-dict.transformer
+   > fairseq-interactive --path $MODEL_DIR/model.pt $MODEL_DIR --beam 5 --source-lang en --target-lang de
+   Namespace(beam=5, buffer_size=1, cpu=False, data=['data-bin/wmt16.en-de.joined-dict.transformer'], diverse_beam_groups=-1, diverse_beam_strength=0.5, fp16=False, fp16_init_scale=128, fp16_scale_tolerance=0.0, fp16_scale_window=None, gen_subset='test', input='-', lazy_load=False, left_pad_source='True', left_pad_target='False', lenpen=1, log_format=None, log_interval=1000, match_source_len=False, max_len_a=0, max_len_b=200, max_sentences=1, max_source_positions=1024, max_target_positions=1024, max_tokens=None, memory_efficient_fp16=False, min_len=1, min_loss_scale=0.0001, model_overrides='{}', nbest=1, no_beamable_mm=False, no_early_stop=False, no_progress_bar=False, no_repeat_ngram_size=0, num_shards=1, num_workers=0, path='data-bin/wmt16.en-de.joined-dict.transformer/model.pt', prefix_size=0, print_alignment=False, quiet=False, raw_text=False, remove_bpe=None, replace_unk=None, required_batch_size_multiple=8, results_path=None, sacrebleu=False, sampling=False, sampling_temperature=1, sampling_topk=-1, score_reference=False, seed=1, shard_id=0, skip_invalid_size_inputs_valid_test=False, source_lang='en', target_lang='de', task='translation', tensorboard_logdir='', threshold_loss_scale=None, unkpen=0, unnormalized=False, upsample_primary=1, user_dir=None)
+   | [en] dictionary: 32768 types
+   | [de] dictionary: 32768 types
+   | loading model(s) from data-bin/wmt16.en-de.joined-dict.transformer/model.pt
+   | Type the input sentence and press return:
+   It is annoying when geographical maps are not up-to-date.
+   S-0     It is <unk> when geographical maps are not <unk>
+   H-0     -0.498351514339447      Es ist kostenlos , wenn geograph@@ ische Karten nicht heruntergeladen werden
+   P-0     -1.0888 -0.1411 -0.3799 -0.1798 -0.1026 -1.4384 -0.0999 -0.0966 -0.2404 -1.4965 -0.2622 -0.4542
+   It is anno@@ ying when geographical maps are not up @-@ to @-@ date .
+   S-2     It is anno@@ ying when geographical maps are not up @-@ to @-@ date .
+   H-2     -0.19444942474365234    Es ist är@@ gerlich , wenn geografische Karten nicht auf dem neuesten Stand sind .
+   P-2     -0.3297 -0.2593 -0.1436 -0.0003 -0.0079 -0.1646 -0.3046 -0.2832 -0.1375 -0.9979 -0.0535 -0.4037 -0.0023 -0.0190 -0.0040 -0.0002
+   ```
 
 ## [Convolutional - Gehring et al., 2017](https://arxiv.org/abs/1705.03122)
 
