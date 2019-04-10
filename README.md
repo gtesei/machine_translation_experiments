@@ -29,10 +29,11 @@ pip install fairseq
 ### Results 
   ```
   $bash fairseq_wmt18_tranformer.sh
+  ...
   BLEU+case.lc+lang.en-de+numrefs.1+smooth.exp+test.wmt18+tok.13a+version.1.3.1 = 39.0 67.7/44.7/32.2/23.8 (BP = 1.000 ratio = 1.040 hyp_len = 66820 ref_len = 64276)
-  Elapsed time (secs): 322
+  Elapsed time (secs): 292
   ```
 
-  The model achieves 39 BLEU and it needs 322 seconds for predicting on the test of WMT18 (2998 sentences). The state of the art (4/10/2019) for WMT18 ([Edunov et al., 2018](https://arxiv.org/abs/1808.09381); WMT'18 winner) claims 46.53 although the fairseq committers discloses the result is not reproducible but it is even much slower.   
+  The model achieves ~39 BLEU score and it needs ~292 seconds for predicting on the test of WMT18 (2,998 sentences). The state of the art (4/10/2019) for WMT18 ([Edunov et al., 2018](https://arxiv.org/abs/1808.09381); WMT'18 winner) claims 46.53 BLEU score although it is much slower.   
   
 
