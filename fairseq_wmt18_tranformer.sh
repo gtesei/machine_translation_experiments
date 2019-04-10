@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # First install sacrebleu and sentencepiece
 pip install sacrebleu sentencepiece
 
@@ -38,7 +39,7 @@ SRC=en
 DEST=de
 CORPUS=wmt18
 MODEL=wmt16.en-de.joined-dict.transformer
-CODE=/home/ubuntu/var/fairseq/data-bin/wmt18ensemble/code
+CODE=code_wmt18
 
 sacrebleu -t wmt18 -l en-de --echo src > wmt18.en-de.en
 cat wmt18.en-de.en| $NORM_PUNC -l en | $TOKENIZER -a -l en -q | python $BPEROOT/apply_bpe.py -c ${CODE} | fairseq-interactive data-bin/${MODEL}/ \
