@@ -115,5 +115,17 @@ URL: https://github.com/pytorch/fairseq
    P-1     -0.4565 -0.4069 -0.6206 -0.0102 -0.1406 -0.0521 -0.1865 -0.2732 -0.1224 -0.0755 -0.3305 -1.7258 -0.5431 -0.1740 -2.5943 -1.3362 -3.7855 -2.1625 -0.2224 -0.0342 -0.0943 -0.1767 -0.9929 -0.4092 -0.0092 -0.0060 -0.0009
    ```
 
+### Support 
+  Language | Pre-trained model from fairseq | link | Notes
+  ---|---|---|---
+  zh | NO (4/11/2019) | -  | - 
+  fr | YES  | https://github.com/pytorch/fairseq/tree/master/examples/translation  | Not sure fr-en (4/11/2019)
+  de | YES (4/11/2019) | https://github.com/pytorch/fairseq/tree/master/examples/translation  | Not sure de-en (4/11/2019)
+  ja | NO (4/11/2019) | -  | - 
+  pt | NO (4/11/2019) | -  | - 
+  es | NO (4/11/2019) | -  | - 
+  ru | NO (4/11/2019) | -  | - 
+  tr | NO (4/11/2019) | -  | - 
+  
 
 
