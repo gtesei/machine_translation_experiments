@@ -120,7 +120,7 @@ URL: https://github.com/pytorch/fairseq
   ---|---|---|---
   zh | NO (4/11/2019) | -  | - 
   fr | YES  | https://github.com/pytorch/fairseq/tree/master/examples/translation  | Not sure fr-en (4/11/2019)
-  de | YES (4/11/2019) | https://github.com/pytorch/fairseq/tree/master/examples/translation  | Not sure de-en (4/11/2019)
+  de | YES  | https://github.com/pytorch/fairseq/tree/master/examples/translation  | Not sure de-en (4/11/2019)
   ja | NO (4/11/2019) | -  | - 
   pt | NO (4/11/2019) | -  | - 
   es | NO (4/11/2019) | -  | - 
