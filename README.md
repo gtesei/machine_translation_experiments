@@ -115,6 +115,21 @@ URL: https://github.com/pytorch/fairseq
    P-1     -0.4565 -0.4069 -0.6206 -0.0102 -0.1406 -0.0521 -0.1865 -0.2732 -0.1224 -0.0755 -0.3305 -1.7258 -0.5431 -0.1740 -2.5943 -1.3362 -3.7855 -2.1625 -0.2224 -0.0342 -0.0943 -0.1767 -0.9929 -0.4092 -0.0092 -0.0060 -0.0009
    ```
 
+### Model 
+  Description | Dataset | Model | Test set(s)
+  ---|---|---|---
+  Transformers ([Otto et al., 2018](https://arxiv.org/abs/1806.00187)) | [WMT14 English-French](http://statmt.org/wmt14/translation-task.html#Download) | [download (.tar.bz2)](https://dl.fbaipublicfiles.com/fairseq/models/wmt14.en-fr.joined-dict.transformer.tar.bz2) | newstest2014: <br> [download (.tar.bz2)](https://dl.fbaipublicfiles.com/fairseq/data/wmt14.en-fr.joined-dict.newstest2014.tar.bz2)
+
+### Results 
+  ```
+  $bash fairseq_wmt14_tranformer_en_fr.sh
+  ...
+  BLEU+case.lc+lang.en-fr+numrefs.1+smooth.exp+test.wmt14+tok.13a+version.1.3.1 = 37.1 64.8/43.0/30.6/22.1 (BP = 1.000 ratio = 1.008 hyp_len = 77956 ref_len = 77306)
+  Elapsed time (secs): 179
+  ```
+
+
+
 ### Fairseq Support 
   Language | Pre-trained model from fairseq | link | Notes
   ---|---|---|---
@@ -126,6 +141,13 @@ URL: https://github.com/pytorch/fairseq
   es | NO (4/11/2019) | -  | - 
   ru | NO (4/11/2019) | -  | - 
   tr | NO (4/11/2019) | -  | - 
+  
+
+### Comparison 
+  Language | Pre-trained model fairseq | VS | State-of-the-art
+  ---|---|---|---
+  en-de (wmt18) | 39.0 | 35.2  | 46.53 
+  en-fr (wmt14)| 37.1  | -  | 43.2
   
 
 
