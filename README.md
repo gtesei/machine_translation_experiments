@@ -144,7 +144,7 @@ URL: https://github.com/pytorch/fairseq
   
 
 ### Comparison (BLEU score)
-  Language | Pre-trained model fairseq | VS | State-of-the-art
+  Language | Pre-trained model fairseq | ST | State-of-the-art
   ---|---|---|---
   en-de (wmt18) | 39.0 | 35.2  | 46.53 
   en-fr (wmt14)| 37.1  | -  | 43.2
