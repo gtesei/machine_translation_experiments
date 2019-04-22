@@ -147,7 +147,7 @@ URL: https://github.com/pytorch/fairseq
   Language | Pre-trained model fairseq | ST | State-of-the-art
   ---|---|---|---
   en-de (wmt18) | 39.0 | 35.2  | 46.53 
-  en-fr (wmt14)| 37.1  | -  | 43.2
+  en-fr (wmt14)| 37.1  | 35.5  | 43.2
   
 
 
